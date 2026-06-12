@@ -19,13 +19,7 @@ function Cadastro() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    if (
-      !titulo ||
-      !autor ||
-      !categoria ||
-      !isbn ||
-      !ano
-    ) {
+    if (!titulo || !autor || !categoria || !isbn || !ano) {
       setErro("Preencha todos os campos.");
       setSucesso("");
       return;
@@ -37,10 +31,7 @@ function Cadastro() {
       return;
     }
 
-    if (
-      Number(ano) < 1500 ||
-      Number(ano) > new Date().getFullYear()
-    ) {
+    if (Number(ano) < 1500 || Number(ano) > new Date().getFullYear()) {
       setErro("Ano inválido.");
       setSucesso("");
       return;
@@ -73,62 +64,42 @@ function Cadastro() {
           type="text"
           placeholder="Título"
           value={titulo}
-          onChange={(e) =>
-            setTitulo(e.target.value)
-          }
+          onChange={(e) => setTitulo(e.target.value)}
         />
 
         <input
           type="text"
           placeholder="Autor"
           value={autor}
-          onChange={(e) =>
-            setAutor(e.target.value)
-          }
+          onChange={(e) => setAutor(e.target.value)}
         />
 
         <input
           type="text"
           placeholder="Categoria"
           value={categoria}
-          onChange={(e) =>
-            setCategoria(e.target.value)
-          }
+          onChange={(e) => setCategoria(e.target.value)}
         />
 
         <input
           type="text"
           placeholder="ISBN"
           value={isbn}
-          onChange={(e) =>
-            setIsbn(e.target.value)
-          }
+          onChange={(e) => setIsbn(e.target.value)}
         />
 
         <input
           type="number"
           placeholder="Ano de Publicação"
           value={ano}
-          onChange={(e) =>
-            setAno(e.target.value)
-          }
+          onChange={(e) => setAno(e.target.value)}
         />
 
-        {erro && (
-          <p className="erro">
-            {erro}
-          </p>
-        )}
+        {erro && <p className="erro">{erro}</p>}
 
-        {sucesso && (
-          <p className="sucesso">
-            {sucesso}
-          </p>
-        )}
+        {sucesso && <p className="sucesso">{sucesso}</p>}
 
-        <button type="submit">
-          Cadastrar Livro
-        </button>
+        <button type="submit">Cadastrar Livro</button>
       </form>
     </div>
   );
