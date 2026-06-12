@@ -1,0 +1,27 @@
+.stats-card {
+  background: white;
+
+  border-radius: 10px;
+
+  padding: 20px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  min-width: 220px;
+
+  text-align: center;
+}
+
+.stats-card h3 {
+  color: #334155;
+
+  margin-bottom: 10px;
+}
+
+.stats-card p {
+  color: #4d7841;
+
+  font-size: 2rem;
+
+  font-weight: bold;
+}

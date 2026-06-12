@@ -1,0 +1,124 @@
+.home-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.home-container h1 {
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.subtitulo {
+  margin-bottom: 20px;
+  color: #64748b;
+}
+
+.descricao-home {
+  color: #475569;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.descricao-secundaria {
+  color: #64748b;
+  margin-bottom: 5px;
+}
+
+.data-atualizacao {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    );
+  gap: 20px;
+}
+
+.section-title {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #4d7841;
+}
+
+.books-grid,
+.users-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    );
+  gap: 15px;
+}
+
+.book-card,
+.user-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px
+    rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-card {
+  min-height: 120px;
+}
+
+.user-card {
+  min-height: 110px;
+}
+
+.book-card h3,
+.user-card h3 {
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.book-card p,
+.user-card p {
+  margin: 2px 0;
+}
+
+.taxa-card {
+  background: white;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px
+    rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.taxa-card h3 {
+  color: #4d7841;
+  margin-bottom: 5px;
+}
+
+.taxa-card p {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #4d7841;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 0 10px;
+  }
+
+  .stats-grid,
+  .books-grid,
+  .users-grid {
+    grid-template-columns: 1fr;
+  }
+}
