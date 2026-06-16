@@ -1,16 +1,190 @@
-# React + Vite
+# 📚 Biblioteca Escolar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema web desenvolvido em React para gerenciamento de livros de uma biblioteca escolar.
 
-Currently, two official plugins are available:
+O projeto permite cadastrar livros, visualizar o acervo, controlar empréstimos e consultar informações externas através de integração com API REST.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🎯 Objetivo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Desenvolver uma aplicação React utilizando:
 
-## Expanding the ESLint configuration
+- React Router
+- Context API
+- Formulários controlados
+- Validação de dados
+- Consumo de API REST
+- Gerenciamento de estado global
+- Componentização
+- Responsividade
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Funcionalidades
+
+### 🏠 Página Inicial
+
+- Dashboard com estatísticas do acervo
+- Total de livros cadastrados
+- Livros disponíveis
+- Livros emprestados
+- Quantidade de categorias
+- Taxa de disponibilidade
+- Exibição dos últimos livros cadastrados
+- Integração com API REST
+
+### ➕ Cadastro de Livros
+
+Permite cadastrar novos livros informando:
+
+- Título
+- Autor
+- Categoria
+- ISBN
+- Ano de publicação
+
+Possui validação dos campos obrigatórios.
+
+### 📋 Listagem de Livros
+
+Permite:
+
+- Visualizar todos os livros cadastrados
+- Alterar status entre:
+  - Disponível
+  - Emprestado
+- Excluir livros
+- Atualização automática através da Context API
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+- React
+- Vite
+- JavaScript
+- React Router DOM
+- Context API
+- Axios
+- CSS3
+- LocalStorage
+
+---
+
+## 🌐 API Utilizada
+
+Foi utilizada a API pública:
+
+https://jsonplaceholder.typicode.com/
+
+Objetivo:
+
+- Demonstrar integração com API REST
+- Realizar requisições HTTP utilizando Axios
+- Exibir dados externos na interface
+
+---
+
+## 📂 Estrutura do Projeto
+
+src
+│
+├── components
+|   ├── BookCard.jsx
+│   ├── Footer.jsx
+│   ├── Navbar.jsx
+│   ├── SearchBar.jsx
+│   └── StatsCard.jsx
+│
+├── contexts
+│   └── BookContext.jsx
+│
+├── pages
+│   ├── Home.jsx
+│   ├── Cadastro.jsx
+│   └── Listagem.jsx
+│
+├── routes
+│   └── AppRoutes.jsx
+│
+├── services
+│   └── api.js
+│
+├── styles
+|   ├── cadastro.css
+|   ├── card.css
+|   ├── footer.css
+│   ├── global.css
+│   ├── home.css
+│   ├── listagem.css
+│   └── navbar.css
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⚙️ Instalação
+
+### Clonar o repositório
+
+```bash
+git clone https://github.com/nalu00/biblioteca-escolar.git
+```
+
+### Entrar na pasta
+
+```bash
+cd biblioteca-escolar
+```
+
+### Instalar dependências
+
+```bash
+npm install
+```
+
+### Executar projeto
+
+```bash
+npm run dev
+```
+
+---
+
+## 📸 Telas do Sistema
+
+### Página Inicial
+
+Dashboard com indicadores e informações do acervo.
+
+### Cadastro
+
+Formulário para cadastro de novos livros.
+
+### Listagem
+
+Consulta, alteração de status e remoção de livros.
+
+---
+
+## 👨‍💻 Integrantes
+
+- Ana Luísa Sales de Oliveira
+- Isabele de Souza Pereira
+
+---
+
+## 📚 Disciplina
+
+Desenvolvimento Front-End com React
+
+Projeto acadêmico desenvolvido para fins educacionais.
+
+---
+
+## © 2026
+
+Biblioteca Escolar
