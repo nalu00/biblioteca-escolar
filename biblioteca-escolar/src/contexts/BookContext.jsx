@@ -1,10 +1,11 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, } from "react";
 
 const BookContext = createContext();
 
 function BookProvider({ children }) {
   const [books, setBooks] = useState(() => {
-    const livrosSalvos = localStorage.getItem("books");
+    const livrosSalvos =
+      localStorage.getItem("books");
 
     if (livrosSalvos) {
       return JSON.parse(livrosSalvos);
@@ -33,7 +34,10 @@ function BookProvider({ children }) {
   });
 
   useEffect(() => {
-    localStorage.setItem("books", JSON.stringify(books));
+    localStorage.setItem(
+      "books",
+      JSON.stringify(books)
+    );
   }, [books]);
 
   function addBook(book) {
@@ -48,7 +52,11 @@ function BookProvider({ children }) {
   }
 
   function removeBook(id) {
-    setBooks((prev) => prev.filter((book) => book.id !== id));
+    setBooks((prev) =>
+      prev.filter(
+        (book) => book.id !== id
+      )
+    );
   }
 
   function toggleStatus(id) {
@@ -58,10 +66,12 @@ function BookProvider({ children }) {
           ? {
               ...book,
               status:
-                book.status === "Disponível" ? "Emprestado" : "Disponível",
+                book.status === "Disponível"
+                  ? "Emprestado"
+                  : "Disponível",
             }
-          : book,
-      ),
+          : book
+      )
     );
   }
 
@@ -79,4 +89,4 @@ function BookProvider({ children }) {
   );
 }
 
-export { BookContext, BookProvider };
+export { BookContext, BookProvider, };
