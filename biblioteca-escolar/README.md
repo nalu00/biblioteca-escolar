@@ -146,6 +146,12 @@ cd biblioteca-escolar
 npm install
 ```
 
+Caso necessário, instalar manualmente as bibliotecas utilizadas no projeto:
+
+```bash
+npm install axios react-router-dom react-hook-form
+```
+
 ### Executar projeto
 
 ```bash
